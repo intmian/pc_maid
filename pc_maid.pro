@@ -26,13 +26,20 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        tool.cpp \
+    stdafx.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+        tool.h \
+        stdafx.h
 
 FORMS += \
         mainwindow.ui
+
+CONFIG += precompile_header
+PRECOMPILED_HEADER=stdafx.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
