@@ -12,3 +12,22 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::prepare_con()
+{
+
+}
+
+void MainWindow::start_ping()
+{
+    auto ping_label = ui->ping_label;
+    auto& data = this->data;
+    std::thread ping_thread([ping_label, data]
+    {
+        while (data.run)
+        {
+
+        }
+    });
+
+}
